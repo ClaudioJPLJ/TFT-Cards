@@ -1,0 +1,180 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #8FB8DE;
+}
+
+main{
+    max-width: calc(650px - 30px);
+    color: white;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    margin: auto;
+}
+
+:root{
+    --imgFullHi: 240px;
+    --imgFullWe: 270px;
+    --selectionCardsW: 185px;
+    --selectionCardsH: 65px;
+    --imgHeadH: 75px;
+    --imgheadW: 80px
+}
+
+.mobsCard{
+    width: 400px;
+    min-height: 500px;
+    position: relative;
+    border-radius: 12px;
+}
+
+.mobInfo{
+    background-color: rgba(243, 31, 137, 0.89);
+    text-align: center;
+    height: 290px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 2px solid rgba(0, 0, 0, 0.932);
+    border-left: 2px solid rgba(0, 0, 0, 0.932);
+    border-right: 2px solid rgba(0, 0, 0, 0.932);
+}
+
+.mobName{
+    display: inline-block;
+    margin-right: 200px;
+    font-size: 2em;
+}
+
+.mobNumber{
+    display: inline-block;
+    text-align: right;
+}
+
+.element{
+    position: absolute;
+    left: 18px;
+    display: inline;
+}
+
+#mobImg > img{
+    width: var(--imgFullWe);
+    height: var(var(--imgFullHi));
+    margin: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-51%, -52%);
+    box-shadow: -2px 1px 3px 1px rgba(0, 0, 0, 0.384);
+    border-radius: 40px;
+}
+
+#mobImg > img:hover{
+    box-shadow: 3px 1px 2px rgba(0, 0, 0, 0.281);
+    transition-duration: 2s;
+    transform: translate(-40%, -52%);
+}
+
+/* Status mob*/
+
+#statusMob{
+    display: flex;
+    justify-content: space-evenly;
+    color:black;
+    background-color: rgb(245, 245, 245);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.932);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.39); ;
+}
+
+#statusMob h2{
+    font-weight: 900;
+    text-shadow: 1px 2px 2px #00000098;
+}
+
+hr{
+   height: 0.5px;
+   background-color: black;
+}
+
+/*Status line*/
+#stats{
+    width: 150px;
+    height: 160px;
+    margin-top:15%;  
+}
+
+#atributes{
+    list-style: none;
+    margin-left: 3px;
+    line-height: 20px;
+}
+
+/*Status line*/
+
+/*habilitys line*/
+#habilitys{
+    width: 150px;
+    height: 160px;
+    margin-top:15%;
+}
+
+#skills{
+    list-style: none;
+    margin-left: 3px;
+    line-height: 20px;
+}
+
+/*habilitys line*/
+
+/*Stat selection cards*/
+
+.selectCards{
+    justify-self:right;
+    width: calc(100% - 350px);
+    display: flex;
+    justify-content: right;
+    border-radius: 5px;
+    height: 520px;
+}
+
+#selectionCards{
+    list-style: none;
+}
+
+#selectionCards li {
+    width: var(--selectionCardsW);
+    height: var(--selectionCardsH);
+    background-color: #585481;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-align: right;
+    position: relative;
+    border-radius: 3px;
+    border-bottom-left-radius: 30px;
+    border: solid 1.5px rgb(196, 107, 24);
+    cursor: pointer;
+}
+
+.clickControl{ /*Control for click event in JS, not to click on image or name*/
+    background-color: rgba(0, 0, 0, 0);
+    height: 65px;
+    width: 185px;
+    position: absolute;
+}
+
+.selectCards img {
+    width: var(--imgheadW);
+    height: var(--imgHeadH);
+}
+
+.selectCards span{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
