@@ -220,3 +220,22 @@ hr{
         border-radius: 50%;
     }
 }
+
+@media (max-width: 460px){
+    
+
+    #selectionCards{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        transform: scale(0.8);
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        
+    }
+
+    .selectCards{
+        position: static;
+    }
+}
