@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
 *{
     padding:0;
     margin:0;
+    
+}
+
+@keyframes rotate{
+    from{transform: skew(22deg, -3deg);}
+    to{transform: skew(0deg, 0deg);}
 }
 
 body{
-    background-color: #8FB8DE;
+    background-image: url(srcs/images/backgrounds/earth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0.9em;
 }
 
 main{
@@ -27,13 +39,15 @@ main{
 
 .mobsCard{
     width: 400px;
-    min-height: 500px;
+    min-height: 250px;
     position: relative;
     border-radius: 12px;
 }
 
+
+
 .mobInfo{
-    background-color: rgba(243, 31, 137, 0.89);
+    background-image: linear-gradient(350deg, #f30707d7, #f0197ad3, #f98dfdc2);
     text-align: center;
     height: 290px;
     border-top-left-radius: 10px;
@@ -41,22 +55,30 @@ main{
     border-top: 2px solid rgba(0, 0, 0, 0.932);
     border-left: 2px solid rgba(0, 0, 0, 0.932);
     border-right: 2px solid rgba(0, 0, 0, 0.932);
+    font-family: 'Revalia', cursive;
+}
+
+#nameNumber{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mobName{
     display: inline-block;
-    margin-right: 200px;
+    margin-left: 15px;
     font-size: 2em;
 }
 
 .mobNumber{
-    display: inline-block;
-    text-align: right;
+    margin-right: 15px;
+    font-size: 1.2em;
 }
 
 .element{
     position: absolute;
-    left: 18px;
+    left: 15px;
+    top:37px;
     display: inline;
 }
 
@@ -65,7 +87,7 @@ main{
     height: var(var(--imgFullHi));
     margin: auto;
     position: absolute;
-    top: 40%;
+    top: 41%;
     left: 50%;
     transform: translate(-51%, -52%);
     box-shadow: -2px 1px 3px 1px rgba(0, 0, 0, 0.384);
@@ -89,6 +111,7 @@ main{
     border-bottom-right-radius: 10px;
     border: 2px solid rgba(0, 0, 0, 0.932);
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.39); ;
+    font-family: 'Oldenburg', cursive;
 }
 
 #statusMob h2{
@@ -129,17 +152,18 @@ hr{
     line-height: 20px;
 }
 
+
 /*habilitys line*/
 
 /*Stat selection cards*/
 
 .selectCards{
-    justify-self:right;
     width: calc(100% - 350px);
     display: flex;
     justify-content: right;
     border-radius: 5px;
     height: 520px;
+    font-family: 'Revalia', cursive;
 }
 
 #selectionCards{
@@ -177,4 +201,22 @@ hr{
     top: 50%;
     left: 20%;
     transform: translate(-20%, -50%);
+}
+
+
+@media (max-width: 585px) {
+    #selectionCards{
+        transform: scale(1);
+        display: inline-block;
+        margin: auto;
+    }
+
+    #selectionCards span{
+        display: none;
+    }
+
+    #selectionCards li{
+        width: 80px;
+        border-radius: 50%;
+    }
 }
