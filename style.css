@@ -222,20 +222,31 @@ hr{
 }
 
 @media (max-width: 460px){
-    
+    main{
+        flex-wrap: wrap;
+    }
 
-    #selectionCards{
-        display: flex;
-        align-items: center;
-        position: absolute;
-        transform: scale(0.8);
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
-        
+    body{
+        background-repeat: repeat-y;
+    }
+
+    .clickControl{
+        width: 80px;
     }
 
     .selectCards{
+        height: 0;
+    }
+
+    #selectionCards{
+        display: grid;
+        grid-template: 80px 80px/ 130px 130px 130px;
+        position: relative;
+        bottom: 65px
+    }
+
+    .selectCards{
+        flex-flow: column;
         position: static;
     }
 }
